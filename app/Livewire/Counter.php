@@ -13,7 +13,10 @@ class Counter extends Component
     }
 
     public function subtract(){
-        $this->number--;
+        if ($this->number > 0) {
+            $this->number--;
+        }
+
 
     }
 

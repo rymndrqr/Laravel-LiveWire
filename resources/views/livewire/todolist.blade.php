@@ -11,12 +11,12 @@
         Add To Do
     </button>
 
-    <ul class="w-80 h-20 mt-5">
+    <ul class="mt-3">
         @foreach ($todos as $index => $todo)
-            <li class="p-2 mt-2 bg-teal-200 rounded-md text-black flex justify-between items-center">
+            <li class="p-2 w-80 h-12 mt-2 bg-teal-200 bg-blend rounded-md text-black flex justify-between items-center">
                 <span>{{ $todo }}</span>
-                <button wire:click="deleteToDo({{ $index }})" class="ml-4 bg-red-500 text-white px-2 py-1 rounded">
-                    Delete
+                <button wire:click="deleteToDo({{ $index }})" class="ml-4 bg-none-500 text-white px-2 py-1 rounded">
+                    <img src="/deleteb.png" class="w-10 h-10">
                 </button>
             </li>
         @endforeach
