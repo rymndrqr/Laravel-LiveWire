@@ -5,10 +5,13 @@ use App\Livewire\Settings\Password;
 use App\Livewire\Settings\Profile;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\Todolist;
+use App\Livewire\Newsletter;
 
 Route::get('/', function () {
     return view('welcome');
 })->name('home');
+
+Route::get('newsletter', newsletter::class);
 
 Route::get("counter", Counter::class);
 

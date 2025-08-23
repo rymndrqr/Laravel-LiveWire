@@ -1,20 +1,23 @@
-<div class="flex items-start max-md:flex-col">
-    <div class="me-10 w-full pb-4 md:w-[220px]">
-        <flux:navlist>
-            <flux:navlist.item :href="route('settings.profile')" wire:navigate>{{ __('Profile') }}</flux:navlist.item>
-            <flux:navlist.item :href="route('settings.password')" wire:navigate>{{ __('Password') }}</flux:navlist.item>
-            <flux:navlist.item :href="route('settings.appearance')" wire:navigate>{{ __('Appearance') }}</flux:navlist.item>
-        </flux:navlist>
-    </div>
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-slate-50">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Newsletter Demo</title>
 
-    <flux:separator class="md:hidden" />
+    {{-- Tailwind via CDN --}}
+    <script src="https://cdn.tailwindcss.com"></script>
 
-    <div class="flex-1 self-stretch max-md:pt-6">
-        <flux:heading>{{ $heading ?? '' }}</flux:heading>
-        <flux:subheading>{{ $subheading ?? '' }}</flux:subheading>
+    {{-- Alpine for the 5s auto-hide --}}
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-        <div class="mt-5 w-full max-w-lg">
-            {{ $slot }}
-        </div>
-    </div>
-</div>
+    {{-- Livewire styles (v2 & v3 compatible) --}}
+    @livewireStyles
+</head>
+<body class="min-h-screen text-slate-900 antialiased">
+    {{ $slot }}
+
+    {{-- Livewire scripts (v2 & v3 compatible) --}}
+    @livewireScripts
+</body>
+</html>
