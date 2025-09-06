@@ -25,7 +25,7 @@ class newsletter extends Component
     'name.min'       => 'Name must be at least 3 characters.',
     'email.required' => 'Please enter your email.',
     'email.email'    => 'Enter a valid email address.',
-    'email.regex'    => 'Email must end with @gmail.com or @yahoo.com',
+    'email.regex'    => 'Must end with @gmail.com or @yahoo.com',
 ];
 
     // Real-time validation as the user types
