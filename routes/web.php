@@ -6,6 +6,9 @@ use App\Livewire\Settings\Profile;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\Todolist;
 use App\Livewire\Newsletter;
+use App\Livewire\Users\Table;
+
+Route::get('table', Table::class);
 
 Route::get('/', function () {
     return view('welcome');
