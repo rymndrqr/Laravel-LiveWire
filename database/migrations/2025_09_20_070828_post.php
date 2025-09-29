@@ -12,6 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         //
+        Schema::create('posts', function (Blueprint $table) {
+            $table->id();
+            $table->string('title');
+            $table->text('content');
+            $table->boolean('is_archived');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -20,5 +27,6 @@ return new class extends Migration
     public function down(): void
     {
         //
+        Schema::dropIfExists('post');
     }
 };
